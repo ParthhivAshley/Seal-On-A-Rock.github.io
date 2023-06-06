@@ -13,4 +13,6 @@ jobs:
           # Target branch
           PAGES_BRANCH: gh-pages
           # Use the automatic token fr publishing to the same repo
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Build log suggests it's a different repo
+          TOKEN: ${{ secrets.TOKEN }}
