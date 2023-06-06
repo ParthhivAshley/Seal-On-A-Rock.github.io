@@ -1,0 +1,13 @@
+base_url = "https://parthhiv.github.io"
+
+title = "Parthhiv's Web Site"
+
+compile_sass = true
+
+build_search_index = false
+
+[markdown]
+smart_punctuation = true
+
+[extra]
+# Put all your custom variables here

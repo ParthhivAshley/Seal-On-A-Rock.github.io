@@ -1,0 +1,140 @@
+$max-width: 40rem // just under 70(root)ch
+$fg: #5e8b59
+$fg-dim: #8eb48a
+$bg: #dbdbc3
+$container-bg: #8eb48a // derived from fg
+$container-fg: #ebebde // dervied from bg
+
+*
+  box-sizing: border-box
+
+:root
+  background: $bg
+  color: $fg
+
+  font-family: Work Sans, sans-serif
+  font-size: 14pt
+  line-height: 1.4em
+
+body
+  margin: 0
+  padding: 0
+
+body > *
+  margin: 0 auto
+  max-width: $max-width // can override
+
+header
+  max-width: 100%
+  padding: 1rem 0 // only vertical, so that header reaches top edge
+                  // want to keep horizontal padding inside (horizontal) auto margin
+                  // under `header > *`
+
+  background: $fg
+  color: $bg
+
+header > *
+  margin: .5em auto
+  padding: 0 1rem // only horizontal, to keep alignment, since header manages vertical
+  max-width: $max-width
+
+.sitetitle
+  font-size: 1.5rem
+  font-weight: 600
+
+.smalltitle
+  font-size: 1rem
+
+header a
+  color: $bg
+
+header a:hover
+  color: $fg
+  background: $bg
+
+nav
+  display: flex
+  gap: 1rem
+
+main
+  padding: 0 1rem
+  padding-bottom: 2rem
+
+main > *
+  margin-top: 1.5em
+
+h1, h2, h3, h4, h5, h6
+  font-weight: 600
+  margin-bottom: 0
+  line-height: 1em
+  overflow-x: scroll
+  padding-top: .1em // prevent y overflow
+  padding-bottom: .1em // prevent y overflow
+
+h1
+  font-size: 48pt
+
+h2
+  font-size: 32pt
+
+h3
+  font-size: 24pt
+
+h4
+  font-size: 18pt
+
+.sub
+  color: #72a26b
+  font-style: italic
+  font-weight: 400
+
+a
+  // padding: .2rem .4rem
+  color: $bg
+  color: $fg
+
+a:hover
+  color: $bg
+  background: $fg
+
+pre, code
+  font-family: Anonymous Pro, monospace
+
+p code
+  // border: 2px solid $fg
+  background: $container-bg
+  color: $container-fg
+
+  border-radius: 8px
+  padding: .2rem .4rem
+
+pre
+  border: 2px solid $fg
+  border-radius: 8px
+  padding: 1rem
+  overflow-x: scroll
+
+.tablewrapper
+  overflow-x: scroll
+  border-radius: 8px
+  border: 2px solid $fg
+
+table
+  border-spacing: 2rem 1rem
+  text-align: left
+
+.cards
+  list-style-position: inside
+  padding: 0
+  list-style: none
+
+.cards > *
+  margin-top: 2em
+
+.card
+  overflow-x: scroll
+
+.card h3
+  overflow-x: visible // titles hyphenate by default
+                      // in this case we make the card scrollable
+                      // so card contents (mainly title) should not hyphenate
