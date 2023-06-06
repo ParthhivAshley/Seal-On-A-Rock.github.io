@@ -24,4 +24,4 @@ set date (date +'%F %H:%M:%S')
 cp -n templates/page.md $target
 sed --in-place "s/{{title}}/$title/" $target
 sed --in-place "s/{{date}}/$date/" $target
-hx $target
+helix $target
